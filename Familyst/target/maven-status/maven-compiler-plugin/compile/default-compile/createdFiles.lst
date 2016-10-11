@@ -1,0 +1,8 @@
+Resources\AuthenticationService.class
+DAO\Interfaces\IFamiliaDAO.class
+Resources\RestAuthenticationFilter.class
+DAO\FamiliaDAO.class
+Resources\ApplicationConfig.class
+Model\Familia.class
+DAO\ConnectionFactory.class
+Resources\FamiliasResources.class
