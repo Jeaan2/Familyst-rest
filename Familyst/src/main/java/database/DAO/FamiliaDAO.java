@@ -27,6 +27,8 @@ public class FamiliaDAO implements IFamiliaDAO{
      * Nomes de colunas e PreparedStatements para execucao de querys
      */
     private final String colid = "idFamilia";
+    private final String colidusuario = "usuario_idUsuario";
+    private final String colidfamilia = "familia_idFamilia";
     private final String colnome = "nome";
     private final String coldescricao = "descricao";
     private final String coldataCriacao = "dataCriacao";
@@ -34,6 +36,7 @@ public class FamiliaDAO implements IFamiliaDAO{
     private final String colidgaleria = "galeria_idgaleria";
     private final String colidarquivo = "arquivo_idarquivo";
     private final String stmtListarFamilia = "SELECT * FROM FAMILIA";
+    private final String stmtListarFamiliasUsuario = "SELECT * FROM USUARIO_HAS_FAMILIA WHERE " + colidusuario + " = ?";    
     private final String stmtBuscarFamilia = "SELECT * FROM FAMILIA WHERE " + colid + " = ?";
     private final String stmtBuscarFamiliaExistente = "SELECT * FROM FAMILIA WHERE " + colnome + " = ? AND " + coldescricao + " = ? AND " + collocal + " = ?";
     private final String stmtInserirFamilia = "INSERT INTO FAMILIA (" + colnome + "," + coldescricao + "," + coldataCriacao + "," + collocal + "," + colidgaleria + "," + colidarquivo + ") VALUES (?,?,NOW(),?,?,?)";
@@ -255,6 +258,38 @@ public class FamiliaDAO implements IFamiliaDAO{
         } catch (Exception e) {
             Logger.getLogger(FamiliaDAO.class.getName()).log(Level.SEVERE, null, e);
             throw e;
+        } finally {
+            try {
+                stmt.close();
+            } catch (Exception ex) {
+            }
+            try {
+                con.close();
+            } catch (Exception ex) {
+            }
+        }
+    }
+
+    @Override
+    public List<Familia> listarFamiliasUsuario(int idUsuario) throws Exception {
+        try {            
+            List<Familia> familias = new ArrayList<>();            
+            
+            con = new ConnectionFactory().getConnection();
+            stmt = con.prepareStatement(stmtListarFamiliasUsuario);
+            stmt.setInt(1, idUsuario);
+            stmt.execute();
+            
+            ResultSet rs = stmt.getResultSet();
+            while (rs.next()) {
+                Familia familia = buscarFamilia(rs.getInt(colidfamilia));
+                familias.add(familia);
+            }            
+            
+            return familias;
+        } catch (Exception e) {
+            Logger.getLogger(FamiliaDAO.class.getName()).log(Level.SEVERE, null, e);
+           throw e;
         } finally {
             try {
                 stmt.close();

@@ -1,3 +1,4 @@
+C:\Users\jdfid\Documents\NetBeansProjects\Familyst\src\main\java\api\resources\UsuariosFamiliasResources.java
 C:\Users\jdfid\Documents\NetBeansProjects\Familyst\src\main\java\interfaces\database\DAO\ITipoItemDAO.java
 C:\Users\jdfid\Documents\NetBeansProjects\Familyst\src\main\java\interfaces\api\resources\IFamiliasResources.java
 C:\Users\jdfid\Documents\NetBeansProjects\Familyst\src\main\java\api\model\Familia.java
@@ -44,11 +45,12 @@ C:\Users\jdfid\Documents\NetBeansProjects\Familyst\src\main\java\interfaces\api\
 C:\Users\jdfid\Documents\NetBeansProjects\Familyst\src\main\java\interfaces\api\resources\IGaleriasResources.java
 C:\Users\jdfid\Documents\NetBeansProjects\Familyst\src\main\java\webclient\doc\DocApp.java
 C:\Users\jdfid\Documents\NetBeansProjects\Familyst\src\main\java\database\DAO\VideoDAO.java
-C:\Users\jdfid\Documents\NetBeansProjects\Familyst\src\main\java\interfaces\database\DAO\IVideoDAO.java
 C:\Users\jdfid\Documents\NetBeansProjects\Familyst\src\main\java\database\DAO\FamiliaDAO.java
+C:\Users\jdfid\Documents\NetBeansProjects\Familyst\src\main\java\interfaces\database\DAO\IVideoDAO.java
 C:\Users\jdfid\Documents\NetBeansProjects\Familyst\src\main\java\database\DAO\TipoItemDAO.java
 C:\Users\jdfid\Documents\NetBeansProjects\Familyst\src\main\java\interfaces\api\resources\IItensResources.java
 C:\Users\jdfid\Documents\NetBeansProjects\Familyst\src\main\java\database\DAO\ArquivoDAO.java
+C:\Users\jdfid\Documents\NetBeansProjects\Familyst\src\main\java\interfaces\api\resources\IUsuariosFamiliasResources.java
 C:\Users\jdfid\Documents\NetBeansProjects\Familyst\src\main\java\api\model\Album.java
 C:\Users\jdfid\Documents\NetBeansProjects\Familyst\src\main\java\api\model\Arquivo.java
 C:\Users\jdfid\Documents\NetBeansProjects\Familyst\src\main\java\interfaces\database\DAO\IArquivoDAO.java

@@ -6,6 +6,7 @@ database\DAO\ItemDAO.class
 interfaces\database\DAO\IUsuarioDAO.class
 database\DAO\TipoItemDAO.class
 api\resources\FamiliasResources$1.class
+interfaces\api\resources\IUsuariosFamiliasResources.class
 database\DAO\AlbumDAO.class
 api\autenticacao\AutenticadorRest.class
 api\resources\FamiliasResources.class
@@ -21,6 +22,7 @@ api\resources\AlbunsResources.class
 interfaces\database\DAO\IItemDAO.class
 api\model\Usuario.class
 database\DAO\VideoDAO.class
+api\resources\UsuariosFamiliasResources.class
 api\resources\UsuariosResources.class
 api\model\Video.class
 webclient\doc\DocApp.class
@@ -48,6 +50,7 @@ database\DAO\ArquivoDAO.class
 database\DAO\UsuarioDAO.class
 api\resources\TiposEventoResources.class
 api\model\Familia.class
+api\resources\UsuariosFamiliasResources$1.class
 api\model\Album.class
 api\resources\TiposEventoResources$1.class
 database\DAO\TipoEventoDAO.class

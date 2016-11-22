@@ -15,18 +15,18 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class AccessTokenRequest {
 
-    public AccessTokenRequest(String usuario, String senha) {
-        this.usuario = usuario;
+    public AccessTokenRequest(String email, String senha) {
+        this.email = email;
         this.senha = senha;
     }
     
      public AccessTokenRequest() {
-        this.usuario = null;
+        this.email = null;
         this.senha = null;
     }
 
-    public String getUsuario() {
-        return usuario;
+    public String getEmail() {
+        return email;
     }
 
     public String getSenha() {
@@ -34,7 +34,7 @@ public class AccessTokenRequest {
     }
     
     @XmlElement
-    private String usuario;
+    private String email;
     @XmlElement
     private String senha;
 }

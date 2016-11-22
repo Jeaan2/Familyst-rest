@@ -29,15 +29,15 @@ public class AccessTokensResource {
     {
         try {           
             
-            //pega usuario e senha vindos do post
-            String usuarioInput = accessTokenRequest.getUsuario();
+            //pega email e senha vindos do post
+            String emailInput = accessTokenRequest.getEmail();
             String senhaInput = accessTokenRequest.getSenha();
             
             //verifica se usuario existe no banco
-            int idUsuario = new UsuarioDAO().autenticarUsuario(usuarioInput, senhaInput);  
+            int idUsuario = new UsuarioDAO().autenticarUsuario(emailInput, senhaInput);  
             
             //monta accesstoken
-            String accessToken = AUTHENTICATION_KEY + ":" + usuarioInput + ":" + senhaInput;
+            String accessToken = AUTHENTICATION_KEY + ":" + emailInput + ":" + senhaInput;
             byte[] bytesEncoded = Base64.encode(accessToken.getBytes());
             accessToken = new String(bytesEncoded);            
             

@@ -31,7 +31,7 @@ public class UsuarioDAO implements IUsuarioDAO{
     private final String colemail = "email";
     private final String collocal = "local";
     private final String coldataCriacao = "dataCriacao";
-    private final String stmtAutenticarUsuario = "SELECT * FROM USUARIO WHERE " + colnome + " = ? AND " + colsenha + " = ?";
+    private final String stmtAutenticarUsuario = "SELECT * FROM USUARIO WHERE " + colemail + " = ? AND " + colsenha + " = ?";
     private final String stmtBuscarUsuario = "SELECT * FROM USUARIO WHERE " + colid + " = ?";
     private final String stmtBuscarUsuarioExistente = "SELECT * FROM USUARIO WHERE " + colemail + " = ?";
     private final String stmtInserirUsuario = "INSERT INTO USUARIO (" + colnome + "," + colsenha + "," + colemail + "," + collocal + "," + coldataCriacao + ") VALUES (?,?,?,?,NOW())";
@@ -45,7 +45,7 @@ public class UsuarioDAO implements IUsuarioDAO{
     PreparedStatement stmt;
     
     @Override
-    public int autenticarUsuario(String nome, String senha) throws Exception
+    public int autenticarUsuario(String email, String senha) throws Exception
     {
         try {         
             
@@ -53,7 +53,7 @@ public class UsuarioDAO implements IUsuarioDAO{
              
             con = new ConnectionFactory().getConnection();
             stmt = con.prepareStatement(stmtAutenticarUsuario);
-            stmt.setString(1, nome);
+            stmt.setString(1, email);
             stmt.setString(2, senha);
             stmt.execute();
             

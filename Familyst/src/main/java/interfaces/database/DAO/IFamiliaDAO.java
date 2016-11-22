@@ -16,6 +16,8 @@ public interface IFamiliaDAO {
         
     public List<Familia> listarFamilias() throws Exception;
     
+    public List<Familia> listarFamiliasUsuario(int idUsuario) throws Exception;
+    
     public Familia buscarFamilia(int idFamilia) throws Exception;
     
     public int inserirFamilia(Familia familia) throws Exception;

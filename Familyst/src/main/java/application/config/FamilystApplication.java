@@ -38,6 +38,7 @@ public class FamilystApplication extends Application {
         resources.add(api.resources.ItensResources.class);
         resources.add(api.resources.TiposEventoResources.class);
         resources.add(api.resources.TiposItemResources.class);
+        resources.add(api.resources.UsuariosFamiliasResources.class);
         resources.add(api.resources.UsuariosResources.class);
         resources.add(api.resources.VideosResources.class);
         resources.add(webclient.doc.DocApp.class);
